@@ -1,0 +1,61 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = 'Form6'
+  ClientHeight = 447
+  ClientWidth = 738
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object WebBrowser1: TWebBrowser
+    Align = Client
+    Size.Width = 738.000000000000000000
+    Size.Height = 316.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object LabelName: TLabel
+    Align = Top
+    Position.Y = 114.000000000000000000
+    Size.Width = 738.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'LabelName'
+    TabOrder = 1
+  end
+  object LabelId: TLabel
+    Align = Top
+    Position.Y = 97.000000000000000000
+    Size.Width = 738.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'LabelId'
+    TabOrder = 2
+  end
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 738.000000000000000000
+    Size.Height = 97.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Image1: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Center
+      Size.Width = 101.000000000000000000
+      Size.Height = 77.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object FacebookLogin1: TFacebookLogin
+    OnLoginFailed = FacebookLogin1LoginFailed
+    OnLoginSuccess = FacebookLogin1LoginSuccess
+    WebBrowser = WebBrowser1
+    Left = 600
+    Top = 216
+  end
+end

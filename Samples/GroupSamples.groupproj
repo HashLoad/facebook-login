@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AE6F0428-A755-4330-A544-F95D1572F07B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\FacebookLogin.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FacebookLoginSample.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FacebookLogin">
+        <MSBuild Projects="..\FacebookLogin.dproj"/>
+    </Target>
+    <Target Name="FacebookLogin:Clean">
+        <MSBuild Projects="..\FacebookLogin.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FacebookLogin:Make">
+        <MSBuild Projects="..\FacebookLogin.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FacebookLoginSample">
+        <MSBuild Projects="FacebookLoginSample.dproj"/>
+    </Target>
+    <Target Name="FacebookLoginSample:Clean">
+        <MSBuild Projects="FacebookLoginSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FacebookLoginSample:Make">
+        <MSBuild Projects="FacebookLoginSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FacebookLogin;FacebookLoginSample"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FacebookLogin:Clean;FacebookLoginSample:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FacebookLogin:Make;FacebookLoginSample:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

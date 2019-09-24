@@ -1,0 +1,18 @@
+inherited Form6_iPhone55in: TForm6_iPhone55in
+  ClientHeight = 716
+  ClientWidth = 414
+  DesignerMasterStyle = 0
+  inherited WebBrowser1: TWebBrowser
+    Size.Width = 414.000000000000000000
+    Size.Height = 585.000000000000000000
+  end
+  inherited LabelName: TLabel
+    Size.Width = 414.000000000000000000
+  end
+  inherited LabelId: TLabel
+    Size.Width = 414.000000000000000000
+  end
+  inherited Layout1: TLayout
+    Size.Width = 414.000000000000000000
+  end
+end

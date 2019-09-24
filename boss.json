@@ -1,0 +1,11 @@
+{
+	"name": "facebook-login",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "Src/",
+	"projects": [
+		"FacebookLogin.dproj"
+	],
+	"dependencies": {}
+}
